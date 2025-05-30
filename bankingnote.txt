@@ -1,0 +1,117 @@
+print('welcome to SBI banking service')
+import random
+x=input('login or new-->')
+if x == 'login':
+    z=input('enter account no-->')
+    x=['MANISH YADAV','PINKY','NEETI','TONY STARK','RICHA','JACK','JOHN','SONI']
+    print('welcome',random.choice(x))
+elif x == 'new':
+    q=0
+    while q<1:
+        a=str(input('enter your first name-->'))
+        b=str(input('enter your last name-->'))
+        c=str(input('enter your address-->'))
+        d=str(input('enter your job address-->'))
+        e=input('enter your D.O.B-->')
+        print()
+        print()
+        print('first name-->',a)
+        print('last name-->',b)
+        print('address-->',c)
+        print('job address-->',d)
+        print('D.O.B-->',e)
+        y=['5166aa','5456sd','2156ig','6445jk','5153ds','6868sf','5356df','6466kf']
+        print('your account no is-->',random.choice(y))
+        n=input('are you sure yes,no-->')
+        if n == 'yes':
+            q+=1
+            print('conguralation your account is created')
+        else:
+            print('try again')
+print('what would you like to do')
+print('for loan enter 1')
+print('for deposit enter 2')
+print('for EMI enter 3')
+print('for life insurance enter 4')
+print('for withdrawl enter 5')
+print('')
+a= int(input('enter-->'))
+if a == 1:
+    print('for car loan enter 1')
+    print('for business loan enter 2')
+    print('for home loan enter 3')
+    b= int(input('enter 1 or 2 or 3-->'))
+    if b == 1:
+        c=int(input('enter amount required-->'))
+        d=int(input('enter time in year for which it is required-->'))
+        e=int(input('enter no of instalments made in a year-->'))
+        print('our rate is -->8.21%')
+        print('total amount to be paid is-->',(8.21/e)*c)    
+    if b == 2:
+        c=int(input('enter amount required-->'))
+        d=int(input('enter time in year for which it is required-->'))
+        e=int(input('enter no of instalments made in a year-->'))
+        print('our rate is -->12.32%')
+        print('total amount to be paid is-->',(12.32/e)*c)
+    if b == 3:
+        c=int(input('enter amount required-->'))
+        d=int(input('enter time in year for which it is required-->'))
+        e=int(input('enter no of instalments made in a year-->'))
+        print('our rate is -->10.2%')
+        print('total amount to be paid is-->',(10.2/e)*c)
+elif a == 2:
+    z=[464656,454646,3254687,6563.36,645346,43546,54533,64353]
+    w=random.choice(z)
+    print('balance-->',z)
+    x=int(input('enter amount to be deposite-->'))
+    print('new balance-->',x+w)
+elif a == 3:
+    print('for EMI on car press 1')
+    print('for EMI on phone press 2')
+    print('for EMI on other electronic appliances press 3')
+    b= int(input('enter 1, 2 or 3-->'))
+    if b == 1:
+        c=int(input('enter price of car-->'))
+        d=int(input('enter time in months for EMI-->'))
+        j=int(input('enter your monthly income-->'))
+        f= 12.21
+        s=(f/100)*c
+        k=s+c
+        print('our rate(pa) is -->12.21%')
+        print('amount to be paid montly is-->',c/d)
+        print('total cost-->',k)
+        g=input('you want EMI yes/no-->')
+        if g == 'yes':
+            if j>(c/d):
+                print('congralutation EMI approved')
+    if b == 2:
+        c=int(input('enter price of car-->'))
+        d=int(input('enter time in months for EMI-->'))
+        j=int(input('enter your monthly income-->'))
+        f= 12.21
+        s=(f/100)*c
+        k=s+c
+        print('our rate(pa) is -->12.21%')
+        print('amount to be paid montly is-->',c/d)
+        print('total cost-->',k)
+        g=input('you want EMI yes/no-->')
+        if g == 'yes':
+            if j>(c/d):
+                print('congralutation EMI approved')
+    if b == 3:
+        c=int(input('enter price of car-->'))
+        d=int(input('enter time in months for EMI-->'))
+        j=int(input('enter your monthly income-->'))
+        f= 12.21
+        s=(f/100)*c
+        k=s+c
+        print('our rate(pa) is -->12.21%')
+        print('amount to be paid montly is-->',c/d)
+        print('total cost-->',k)
+        g=input('you want EMI yes/no-->')
+        if g == 'yes':
+            if j>(c/d):
+                print('congralutation EMI approved')
+else:
+    print('input is wrong')
+                                                

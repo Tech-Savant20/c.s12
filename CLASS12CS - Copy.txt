@@ -1,0 +1,70 @@
+from tkinter import *
+import mysql.connector as msq
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('215x200')
+ 
+
+def final():
+    final=Toplevel()
+    button1=Button(final,text='add',padx=10,pady=10,command=add).grid(row=1,column=1)
+    button2=Button(final,text='del',padx=10,pady=10,command=dele).grid(row=1,column=3)
+    button3=Button(final,text='list',padx=10,pady=10,command=lists).grid(row=3,column=1)
+    button4=Button(final,text='search',padx=10,pady=10,command=search).grid(row=3,column=3)
+    exitbutton=Button(final,command=final.destroy,text='EXIT').grid(row=4,column=2)   
+
+def sign_in():
+    sign_in= Toplevel()
+    label1=Label(sign_in,text='SIGN IN').grid(row=1,column=2)
+    label2=Label(sign_in,text='EMAIL:').grid(row=2,column=1)
+    label3=Label(sign_in,text='PASSWORD:').grid(row=3,column=1)
+    entry1=Entry(sign_in).grid(row=2,column=3)
+    entry2=Entry(sign_in).grid(row=3,column=3)
+    exitbutton=Button(sign_in,command=sign_in.destroy,text='EXIT').grid(row=4,column=1)
+    confirm=Button(sign_in,text='ENTER',command=final).grid(row=4 ,column=3 )
+
+def sign_up():
+    sign_up= Toplevel()
+    label1=Label(sign_up,text='SIGN UP').grid(row=1,column=2)
+    label2=Label(sign_up,text='NAME:').grid(row=2,column=1)
+    label3=Label(sign_up,text='EMAIL:').grid(row=3,column=1)
+    label4=Label(sign_up,text='PASSWORD:').grid(row=4,column=1)
+    label5=Label(sign_up,text='CONFIRMPASSWORD:').grid(row=5,column=1)
+    entry1=Entry(sign_up).grid(row=2,column=3)
+    entry2=Entry(sign_up).grid(row=3,column=3)
+    entry3=Entry(sign_up).grid(row=4,column=3)
+    entry4=Entry(sign_up).grid(row=5,column=3)
+    exitbutton=Button(sign_up,command=sign_up.destroy,text='EXIT').grid(row=6,column=1)   
+    confirm=Button(sign_up,text='ENTER',command=final).grid(row=6 ,column=3 )
+    
+def add():
+    add = Toplevel()
+    label1 = Label(add,text='site/app:').grid(row=1,column=1)
+    label2 = Label(add,text = 'password:').grid(row=2,column=1)
+    enter1 = Entry(add).grid(row=1,column=3)
+    enter2 = Entry(add).grid(row=2,column=3)
+    button1 = Button(add,text='add').grid(row=3,column=2)
+def dele():
+    dele = Toplevel()
+    label1 = Label(dele,text='site/app').grid(row=1,column=1)
+    enter1 = Entry(dele).grid(row=1,column=3)
+    button1 = Button(dele,text='delete').grid(row=2,column=2)
+def lists():
+    lists = Toplevel()
+def search():   
+    search = Toplevel()
+    label1 = Label(search,text='site/app').grid(row=1,column=1)
+    enter1 = Entry(search).grid(row=1,column=3)
+    button1 = Button(search,text= 'search').grid(row=2,column=2)
+    
+
+
+
+sign_in = Button(root,text='sign in',padx=15,pady=10,command=sign_in).grid(row=2,column=1)
+sign_up = Button(root,text='sign up',padx=15,pady=10,command=sign_up).grid(row=2,column=3)
+label1=Label(root,text='',padx=20,pady=20).grid(row=2,column=2)
+exitbutton=Button(root,command=root.destroy,text='EXIT',padx=15,pady=10).grid(row=3,column=2)
+
+
+root.mainloop()

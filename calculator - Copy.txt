@@ -1,0 +1,43 @@
+from tkinter import *
+import tkinter
+
+root = tkinter.Tk()
+root.geometry('250x400')
+root.resizable(1,1)
+root.title('Calculator')
+
+label1 = Label(root, text = 'label', anchor = SE, font = ('Verdana', 20)).pack(expand=True, fill = 'both')
+
+fra1= Frame(root).pack(expand=True, fill = 'both',)
+fra2= Frame(root).pack(expand=True, fill = 'both',)
+fra3= Frame(root).pack(expand=True, fill = 'both',)
+fra4= Frame(root).pack(expand=True, fill = 'both',)
+
+
+button1 = Button(fra1,font = ('Verdana', 20), text = '1',).pack(side = LEFT,expand = True, fill = 'both')
+button2 = Button(fra1,font = ('Verdana', 20), text = '2').pack(side = LEFT,expand = True, fill = 'both')
+button3 = Button(fra1,font = ('Verdana', 20), text = '3').pack(side = LEFT,expand = True, fill = 'both')
+buttonplus = Button(fra1,font = ('Verdana', 20), text = '+').pack(side = LEFT,expand = True, fill = 'both')
+
+
+button4 = Button(fra2,font = ('Verdana', 20), text = '4').pack(side = LEFT,expand = True, fill = 'both')
+button5 = Button(fra2,font = ('Verdana', 20), text = '5').pack(side = LEFT,expand = True, fill = 'both')
+button6 = Button(fra2,font = ('Verdana', 20), text = '6').pack(side = LEFT,expand = True, fill = 'both')
+buttonminus = Button(fra2,font = ('Verdana', 20), text = '-').pack(side = LEFT,expand = True, fill = 'both')
+
+
+button7 = Button(fra3,font = ('Verdana', 20), text = '7').pack(side = LEFT,expand = True, fill = 'both')
+button8 = Button(fra3,font = ('Verdana', 20), text = '8').pack(side = LEFT,expand = True, fill = 'both')
+button9 = Button(fra3,font = ('Verdana', 20), text = '9').pack(side = LEFT,expand = True, fill = 'both')
+buttonmultiply = Button(fra3,font = ('Verdana', 20), text = '*').pack(side = LEFT,expand = True, fill = 'both')
+
+
+buttonc = Button(fra4,font = ('Verdana', 20), text = 'c').pack(side = LEFT,expand = True, fill = 'both')
+button0 = Button(fra4,font = ('Verdana', 20), text = '0').pack(side = LEFT,expand = True, fill = 'both')
+buttonequal = Button(fra4,font = ('Verdana', 20), text = '=').pack(side = LEFT,expand = True, fill = 'both')
+buttondivide = Button(fra4,font = ('Verdana', 20), text = '/').pack(side = LEFT,expand = True, fill = 'both')
+
+
+
+
+root.mainloop()
